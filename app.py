@@ -105,7 +105,7 @@ section = st.sidebar.radio("Navigate", ["Home", "Prediction", "Sentiment Analysi
 if section == "Home":
     st.title("ITEQMT Machine Learning Application Portfolio")
     st.write("## Multiple Maching Learning by Jaye")
-    st.image("https://getwallpapers.com/wallpaper/full/b/7/0/765203-technology-background-images-1920x1080-hd.jpg", use_column_width=True)  # Replace with your image URL
+    st.image("https://getwallpapers.com/wallpaper/full/b/7/0/765203-technology-background-images-1920x1080-hd.jpg", use_column_width=True)
     st.write("""
         Welcome to my Machine Learning Application Portfolio. Here, you will find various machine learning projects that I have worked on, along with the source code and descriptions.
     """)
@@ -130,11 +130,11 @@ if section == "Home":
 elif section == "Prediction":
     st.sidebar.subheader("Prediction")
     st.subheader("Prediction")
-    st.write("This application allows you to make predictions based on input features using a pre-trained machine learning model.")
+    st.write("This application allows you to make predictions on the significance of the earthquake when occurs.")
 
     @st.cache_data
     def load_data():
-        datasetCSV = pd.read_csv("/content/drive/MyDrive/Significant Earthquake Dataset 1900-2023.csv")
+        datasetCSV = pd.read_csv("significantearthquakedataset1900-2023.csv")
         features = ['Mag', 'Depth', 'Latitude', 'Longitude']
         X = datasetCSV[features]
         y = (datasetCSV['Mag'] >= 6.0).astype(int)
@@ -255,7 +255,7 @@ elif section == "Sentiment Analysis":
 elif section == "Image Classification":
     st.sidebar.subheader("Image Classification")
     st.subheader("Image Classification")
-    st.write("This application allows you to classify images into different categories using a pre-trained image classification model.")
+    st.write("This application allows you to classify dog images into different breeds using a pre-trained image classification model.")
 
     MAX_FILE_SIZE = 5 * 1024 * 1024  # 5MB
 
@@ -301,7 +301,7 @@ import pandas as pd
 import numpy as np
 
 # Read the dataset
-datasetCSV = pd.read_csv("/content/drive/MyDrive/Significant Earthquake Dataset 1900-2023.csv")
+datasetCSV = pd.read_csv("significantearthquakedataset1900-2023.csv")
 
 # Select relevant features
 from google.colab import drive
