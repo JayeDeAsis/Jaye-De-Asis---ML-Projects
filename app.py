@@ -104,7 +104,7 @@ section = st.sidebar.radio("Navigate", ["Home", "Prediction", "Sentiment Analysi
 
 if section == "Home":
     st.title("ITEQMT Machine Learning Application Portfolio")
-    st.write("## Multiple Maching Learning by Jaye")
+    st.write("## Multiple Machine Learning by Jaye")
     st.image("https://getwallpapers.com/wallpaper/full/b/7/0/765203-technology-background-images-1920x1080-hd.jpg", use_column_width=True)
     st.write("""
         Welcome to my Machine Learning Application Portfolio. Here, you will find various machine learning projects that I have worked on, along with the source code and descriptions.
